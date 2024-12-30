@@ -21,7 +21,7 @@ services:
       - "8080:8080"  # Exposing the Spring Boot application port
     environment:
       - spring.data.mongodb.uri=mongodb://mongodb:27017/test  # Use the MongoDB service name
-      - SPRING_PROFILES_ACTIVE=dev  # Set active profile to dev
+      - SPRING_PROFILES_ACTIVE=dev  # Set active profile to dev2
 
 volumes:
   mongo-data:

@@ -1,6 +1,5 @@
 package com.huan.demo.service;
 
-import com.huan.demo.config.MongoDBTestContainerConfigTest;
 import com.huan.demo.entity.User;
 import com.huan.demo.repository.UserRepository;
 import org.junit.jupiter.api.AfterEach;
@@ -14,7 +13,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class UserServiceTest extends MongoDBTestContainerConfigTest {
+class UserServiceTest {
     @Autowired
     private UserService userService;
 

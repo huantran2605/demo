@@ -1,6 +1,6 @@
 package com.huan.demo.controller;
 
-import com.huan.demo.config.MongoDBTestContainerConfigTest;
+import com.huan.demo.repository.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -11,20 +11,21 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @AutoConfigureMockMvc
-class UserControllerIntegrationTest extends MongoDBTestContainerConfigTest {
+class UserControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
 
+    @Autowired
+    private UserRepository userRepository;
+
     @Test
     public void testGetAllUsers() throws Exception {
         mockMvc.perform(get("/api/users"))
-                .andExpect(MockMvcResultMatchers.status().isOk())
-                .andDo(print());
+                .andExpect(MockMvcResultMatchers.status().isOk());
     }
 
     @Test
@@ -34,8 +35,10 @@ class UserControllerIntegrationTest extends MongoDBTestContainerConfigTest {
         mockMvc.perform(post("/api/users")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(userJson))
-                .andExpect(MockMvcResultMatchers.status().isOk())
-                .andDo(print());
+                .andExpect(MockMvcResultMatchers.status().isOk());
+
+        //delete
+        userRepository.deleteAll();
     }
 
 }

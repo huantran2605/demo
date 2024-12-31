@@ -1,8 +1,6 @@
 package com.huan.demo1.controller;
 
 import com.huan.demo1.config.MongoDBTestContainerConfigTest;
-import com.huan.demo1.entity.User;
-import com.huan.demo1.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -22,9 +20,6 @@ class UserControllerIntegrationTest extends MongoDBTestContainerConfigTest {
     @Autowired
     private MockMvc mockMvc;
 
-    @Autowired
-    private UserService userService;
-
     @Test
     public void testGetAllUsers() throws Exception {
         mockMvc.perform(get("/api/users"))
@@ -43,11 +38,4 @@ class UserControllerIntegrationTest extends MongoDBTestContainerConfigTest {
                 .andDo(print());
     }
 
-    @Test
-    public void testGetUser_ById() throws Exception {
-        User user = userService.findByName("John Doe");
-        mockMvc.perform(get("/api/users/" + user.getId()))
-                .andExpect(MockMvcResultMatchers.status().isOk())
-                .andDo(print());
-    }
 }

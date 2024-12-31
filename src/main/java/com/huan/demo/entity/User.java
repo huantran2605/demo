@@ -1,4 +1,4 @@
-package com.huan.demo1.entity;
+package com.huan.demo.entity;
 
 import lombok.*;
 import org.springframework.data.annotation.Id;

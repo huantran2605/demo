@@ -1,4 +1,4 @@
-package com.huan.demo1.config;
+package com.huan.demo.config;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;

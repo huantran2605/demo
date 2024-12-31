@@ -1,4 +1,4 @@
-package com.huan.demo1.model.request;
+package com.huan.demo.model.request;
 
 import lombok.Getter;
 import lombok.Setter;

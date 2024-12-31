@@ -1,6 +1,6 @@
-package com.huan.demo1.repository;
+package com.huan.demo.repository;
 
-import com.huan.demo1.entity.User;
+import com.huan.demo.entity.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

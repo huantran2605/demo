@@ -1,8 +1,8 @@
-package com.huan.demo1.service;
+package com.huan.demo.service;
 
-import com.huan.demo1.entity.User;
-import com.huan.demo1.model.request.UserRequest;
-import com.huan.demo1.repository.UserRepository;
+import com.huan.demo.entity.User;
+import com.huan.demo.model.request.UserRequest;
+import com.huan.demo.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;

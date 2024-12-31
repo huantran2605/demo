@@ -1,8 +1,8 @@
-package com.huan.demo1.controller;
+package com.huan.demo.controller;
 
-import com.huan.demo1.entity.User;
-import com.huan.demo1.model.request.UserRequest;
-import com.huan.demo1.service.UserService;
+import com.huan.demo.entity.User;
+import com.huan.demo.model.request.UserRequest;
+import com.huan.demo.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

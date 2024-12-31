@@ -1,6 +1,6 @@
-package com.huan.demo1.controller;
+package com.huan.demo.controller;
 
-import com.huan.demo1.config.MongoDBTestContainerConfigTest;
+import com.huan.demo.config.MongoDBTestContainerConfigTest;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;

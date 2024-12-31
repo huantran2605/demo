@@ -1,8 +1,8 @@
-package com.huan.demo1.service;
+package com.huan.demo.service;
 
-import com.huan.demo1.config.MongoDBTestContainerConfigTest;
-import com.huan.demo1.entity.User;
-import com.huan.demo1.repository.UserRepository;
+import com.huan.demo.config.MongoDBTestContainerConfigTest;
+import com.huan.demo.entity.User;
+import com.huan.demo.repository.UserRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
